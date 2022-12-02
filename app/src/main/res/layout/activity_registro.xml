@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.RegistroActivity"
+    android:fitsSystemWindows="true"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:background="@drawable/fondo_view"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <ImageView
+            android:id="@+id/img_regreso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_regreso"
+            android:layout_marginStart="20dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/card_registro"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_registro"
+            android:layout_width="317dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:cardCornerRadius="20dp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="0.5dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:backgroundTint="#F5F5F5"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:helperTextEnabled="true"
+                    app:helperText="Requerido"
+                    app:helperTextTextColor="@color/red"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="45"
+
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/te_nombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Nombre"
+                        android:maxLines="1"
+                        android:maxLength="45"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_apellido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:helperTextEnabled="true"
+                    app:helperText="Requerido"
+                    app:helperTextTextColor="@color/red"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="45"
+                    android:layout_marginTop="5dp"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/te_apellido"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Apellido"
+                        android:maxLines="1"
+                        android:maxLength="45"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_edad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:helperTextEnabled="true"
+                    app:helperText="Requerido"
+                    app:helperTextTextColor="@color/red"
+                    android:layout_marginTop="5dp"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/te_edad"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Edad"
+                        android:maxLines="1"
+
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_usuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:helperTextEnabled="true"
+                    app:helperText="Requerido"
+                    app:helperTextTextColor="@color/red"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="45"
+                    android:layout_marginTop="5dp"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/te_usuario"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Usuario"
+                        android:maxLines="1"
+                        android:maxLength="45"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:helperTextEnabled="true"
+                    app:helperText="Requerido"
+                    app:helperTextTextColor="@color/red"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="45"
+                    android:layout_marginTop="5dp"
+                    app:passwordToggleEnabled="true"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/te_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Password"
+                        android:maxLines="1"
+                        android:inputType="textPassword"
+                        android:maxLength="45"
+
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_img_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:helperTextEnabled="true"
+                    app:helperTextTextColor="@color/red"
+                    app:counterEnabled="true"
+                    android:layout_marginTop="5dp"
+
+                    >
+
+                    <EditText
+                        android:id="@+id/tx_img_url"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:inputType="text|textMultiLine"
+                        android:gravity="top"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_registrar_usuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/boton_interfaces"
+                    android:layout_marginTop="20dp"
+                    android:text="Registrar"
+                    android:textColor="@color/white"
+                    android:onClick="registrar"
+                    />
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.RegistroFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="25dp"
+        android:gravity="center_vertical"
+        >
+
+        <Switch
+            android:id="@+id/id_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_gravity="center"
+            android:text="Activar ingreso"
+            android:layout_marginBottom="25dp"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripcion"
+            android:textSize="30sp"
+            />
+        <EditText
+            android:id="@+id/et_descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fecha"
+            android:textSize="30sp"
+            />
+        <EditText
+            android:id="@+id/et_fecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Monto"
+            android:textSize="30sp"
+            />
+        <EditText
+            android:id="@+id/et_monto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar ingresos"
+            android:textSize="30sp"
+            />
+        <EditText
+            android:id="@+id/et_ingresos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar gastos"
+            android:textSize="30sp"
+            />
+        <EditText
+            android:id="@+id/et_gastos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_500"
+            android:inputType="number"
+            />
+
+        <Button
+            android:id="@+id/btn_registrar_ingresos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar"
+            android:layout_marginTop="25dp"
+            />
+        
+    </LinearLayout>
+   
+
+</androidx.constraintlayout.widget.ConstraintLayout>
