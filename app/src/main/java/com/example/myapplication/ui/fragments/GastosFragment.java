@@ -26,6 +26,7 @@ public class GastosFragment extends Fragment {
 
     private TableLayout tb_gastos;
     private TextView tv_descripcion;
+    private TextView tv_ingresos;
     private TextView tv_gastos;
 
     ProductoDAO dao = null;
@@ -53,8 +54,10 @@ public class GastosFragment extends Fragment {
 
             tv_descripcion = tableRow.findViewById(R.id.tv_descripcion_gastos);
             tv_gastos = tableRow.findViewById(R.id.tv_gastos_gastos);
+            tv_ingresos = tableRow.findViewById(R.id.tv_ingresos_gastos);
 
             tv_descripcion.setText(p.getDescripcion());
+            tv_ingresos.setText("S/. " + p.getIngresos());
             tv_gastos.setText("S/. - " + p.getEgresos());
 
             tb_gastos.addView(tableRow);

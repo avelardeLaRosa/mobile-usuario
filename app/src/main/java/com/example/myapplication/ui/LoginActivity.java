@@ -125,8 +125,6 @@ public class LoginActivity extends AppCompatActivity {
                             }else{
                                 Toast.makeText(LoginActivity.this, "Sesion Invalida", Toast.LENGTH_SHORT).show();
                             }
-
-                            Toast.makeText(LoginActivity.this, "Error interno " + t.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     });
 

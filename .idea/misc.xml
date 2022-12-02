@@ -3,16 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/drawable-v24/boton_interfaces.xml" value="0.193" />
+        <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/drawable-v24/boton_interfaces.xml" value="0.134" />
         <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/drawable-v24/ic_regreso.xml" value="0.1" />
-        <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/activity_login.xml" value="0.5" />
+        <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/activity_login.xml" value="0.4459613196814562" />
         <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/activity_registro.xml" value="0.25" />
+        <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/activity_registro.xml" value="0.33" />
         <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/fragment_datos.xml" value="0.33" />
         <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/fragment_gastos.xml" value="0.19791666666666666" />
         <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/fragment_registro.xml" value="0.22" />
         <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/fragment_usuario.xml" value="0.18" />
-        <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/item_table.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/item_table.xml" value="0.33" />
         <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/item_table_gastos.xml" value="0.11614583333333334" />
       </map>
     </option>
