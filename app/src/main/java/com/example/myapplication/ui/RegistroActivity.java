@@ -48,7 +48,6 @@ public class RegistroActivity extends AppCompatActivity  {
 
     private Button btn_registrar;
 
-    boolean url_valida;
 
     Usuario usuario = new Usuario();
 
@@ -58,14 +57,24 @@ public class RegistroActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
+
+
+
         inicializar();
+
+        ti_nombre.setHelperText("");
+        ti_apellido.setHelperText("");
+        ti_password.setHelperText("");
+        ti_edad.setHelperText("");
+        ti_usuario.setHelperText("");
+        ti_password.setHelperText("");
+        ti_img_url.setHelperText("");
+
         validarInputs();
         goBack();
 
         btn_registrar = (Button) findViewById(R.id.btn_registrar_usuario);
 
-
-        //registrar();
     }
 
     private void inicializar(){
@@ -104,51 +113,6 @@ public class RegistroActivity extends AppCompatActivity  {
         usuarioFocusListener();
         passwordFocusListener();
         imgFocusListener();
-    }
-
-    private void registrar() {
-
-
-
-        btn_registrar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String nombre = te_nombre.getText().toString().trim();
-                String apellido = te_apellido.getText().toString().trim();
-                String edad = te_edad.getText().toString().trim();
-                String usuario = te_usuario.getText().toString().trim();
-                String password = te_password.getText().toString().trim();
-                String img_url = te_img_url.getText().toString().trim();
-/*
-
-
- */
-               // if((nombre.length()>0) || (apellido.length()>0) || (edad.length()>0) || (usuario.length()>0) || (password.length()>0) || (img_url.length()>0)){
-                    //if(url_valida){
-                        Usuario u = new Usuario(nombre,apellido,edad,usuario,password,img_url);
-                        Call<Usuario> call = ApiClient.getClient().create(ApiUsuario.class).add(u);
-                        call.enqueue(new Callback<Usuario>() {
-                            @Override
-                            public void onResponse(Call<Usuario> call, Response<Usuario> response) {
-                                if(response.isSuccessful()){
-                                    Usuario usuario1 = response.body();
-                                    Toast.makeText(RegistroActivity.this, "Ya estas registrado " + usuario1.getNombre() + " " + usuario1.getApellido(), Toast.LENGTH_SHORT).show();
-                                }
-                            }
-
-                            @Override
-                            public void onFailure(Call<Usuario> call, Throwable t) {
-                                Toast.makeText(RegistroActivity.this, "No se pudo registrar al usuario", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                   // }
-                }
-
-                //Toast.makeText(RegistroActivity.this, "Campos vacios o invalidos, Verifique!", Toast.LENGTH_SHORT).show();
-
-
-            });
-       // });
     }
 
 
@@ -280,33 +244,31 @@ public class RegistroActivity extends AppCompatActivity  {
         String password = te_password.getText().toString().trim();
         String img_url = te_img_url.getText().toString().trim();
 
-        Usuario u = new Usuario(nombre,apellido,edad,user,password,img_url);
 
-        if((nombre.length()>0) && (apellido.length()>0) && (edad.length()>0) && (user.length()>0) && (password.length()>0) && (img_url.length()>0)){
 
-            if(url_valida){
-                Call<Usuario> call = ApiClient.getClient().create(ApiUsuario.class).add(u);
-                call.enqueue(new Callback<Usuario>() {
-                    @Override
-                    public void onResponse(@NonNull Call<Usuario> call, @NonNull Response<Usuario> response) {
-                        if(response.isSuccessful()){
-                            usuario = response.body();
-                            Toast.makeText(RegistroActivity.this,"Te registraste " + usuario.getNombre() + " " + usuario.getApellido(),Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(RegistroActivity.this, LoginActivity.class));
-                            finish();
-                        }
+        if((nombre.length()==0) || (apellido.length()==0) || (edad.length()==0) || (user.length()==0) || (password.length()==0) || (img_url.length()==0)){
+            Toast.makeText(RegistroActivity.this,"Campos vacios o invalidos",Toast.LENGTH_SHORT).show();
+        }else{
+            Usuario u = new Usuario(nombre,apellido,edad,user,password,img_url);
+            Call<Usuario> call = ApiClient.getClient().create(ApiUsuario.class).add(u);
+            call.enqueue(new Callback<Usuario>() {
+                @Override
+                public void onResponse(@NonNull Call<Usuario> call, @NonNull Response<Usuario> response) {
+                    if(response.isSuccessful()){
+                        usuario = response.body();
+                        Toast.makeText(RegistroActivity.this,"Te registraste " + usuario.getNombre() + " " + usuario.getApellido(),Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(RegistroActivity.this, LoginActivity.class));
+                        finish();
                     }
-                    @Override
-                    public void onFailure(Call<Usuario> call, Throwable t) {
-                        Toast.makeText(RegistroActivity.this,"No se pudo registrar" + usuario.getNombre() + " " + usuario.getApellido(),Toast.LENGTH_SHORT).show();
-                    }
-                });
-            }
-
-
+                }
+                @Override
+                public void onFailure(Call<Usuario> call, Throwable t) {
+                    Toast.makeText(RegistroActivity.this,"No se pudo registrar",Toast.LENGTH_SHORT).show();
+                }
+            });
         }
 
-        Toast.makeText(RegistroActivity.this,"Campos vacios o invalidos",Toast.LENGTH_SHORT).show();
+
 
 
 
