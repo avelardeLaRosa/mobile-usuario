@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -15,6 +14,7 @@ import com.example.myapplication.R;
 import com.example.myapplication.adapter.ViewPagerAdapter;
 import com.example.myapplication.ui.fragments.DatosFragment;
 import com.example.myapplication.ui.fragments.GastosFragment;
+import com.example.myapplication.ui.fragments.IngresoGastosFragment;
 import com.example.myapplication.ui.fragments.RegistroFragment;
 import com.example.myapplication.ui.fragments.UsuarioFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
         );
         viewPagerAdapter.addFragment(new DatosFragment(), "Datos");
+        viewPagerAdapter.addFragment(new IngresoGastosFragment(), "Ingreso/Gastos");
         viewPagerAdapter.addFragment(new GastosFragment(), "Gastos");
         viewPagerAdapter.addFragment(new RegistroFragment(), "Registro");
         viewPagerAdapter.addFragment(new UsuarioFragment(), "Usuario");

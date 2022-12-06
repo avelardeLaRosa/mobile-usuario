@@ -9,11 +9,15 @@
         <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/activity_registro.xml" value="0.33" />
         <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/fragment_datos.xml" value="0.33" />
-        <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/fragment_gastos.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/fragment_gastos.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/fragment_ingreso_gastos.xml" value="0.21" />
         <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/fragment_registro.xml" value="0.22" />
         <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/fragment_usuario.xml" value="0.18" />
+        <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/item_gastos_gastos.xml" value="0.203125" />
+        <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/item_gastos_gatos.xml" value="0.10729166666666666" />
         <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/item_table.xml" value="0.33" />
         <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/item_table_gastos.xml" value="0.11614583333333334" />
+        <entry key="..\:/Users/ADMIN/Documents/Alexander/servicioMobileLogin/app/src/main/res/layout/item_table_ingreso_gastos.xml" value="0.1" />
       </map>
     </option>
   </component>

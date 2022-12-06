@@ -19,10 +19,13 @@ import com.example.myapplication.model.Producto;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GastosFragment extends Fragment {
 
-    private TableLayout table_gastos;
-    private TextView txt_item_gastos;
+public class IngresoGastosFragment extends Fragment {
+
+    private TableLayout tb_gastos;
+    private TextView tv_ingresos;
+    private TextView tv_gastos;
+
     ProductoDAO dao = null;
 
     @Override
@@ -35,23 +38,26 @@ public class GastosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_gastos, container, false);
+        View view = inflater.inflate(R.layout.fragment_ingreso_gastos, container, false);
 
-        table_gastos = (TableLayout) view.findViewById(R.id.table_gastos);
+        tb_gastos = (TableLayout) view.findViewById(R.id.table_layout_gastos);
 
         List<Producto> productos = new ArrayList<>();
         productos = dao.listar();
 
 
         for(Producto p: productos){
-            View tableRow = LayoutInflater.from(getActivity()).inflate(R.layout.item_gastos_gastos,null,false);
+            View tableRow = LayoutInflater.from(getActivity()).inflate(R.layout.item_table_ingreso_gastos,null,false);
 
-            txt_item_gastos = tableRow.findViewById(R.id.txt_item_gastos);
+            tv_gastos = tableRow.findViewById(R.id.tv_gastos_gastos);
+            tv_ingresos = tableRow.findViewById(R.id.tv_ingresos_gastos);
 
-            txt_item_gastos.setText("S/. - " + p.getEgresos());
+            tv_ingresos.setText("S/. " + p.getIngresos());
+            tv_gastos.setText("S/. - " + p.getEgresos());
 
-            table_gastos.addView(tableRow);
+            tb_gastos.addView(tableRow);
         }
+
 
         return view;
     }
